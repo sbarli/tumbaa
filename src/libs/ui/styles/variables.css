@@ -9,8 +9,8 @@ font-family: 'Nunito Sans', sans-serif; */
   --teal-primary: #2A5270;
   --teal-dark: #1A3346;
   --gold-light: #FFD761;
-  --gold-primary: #AD903A;
-  --gold-dark: #EEC752;
+  --gold-primary: #EEC752;
+  --gold-dark: #AD903A;
   --blurple-light: #5D5DC5;
   --blurple-primary: #353579;
   --blurple-dark: #20204C;
@@ -25,8 +25,8 @@ font-family: 'Nunito Sans', sans-serif; */
   --font-stack-default: -apple-system, BlinkMacSystemFont, 'Nunito Sans', sans-serif;
   --font-stack-headers: 'Josefin Sans', sans-serif;
   --font-stack-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-  --font-size-default: 2rem;
-  --font-size-sm: 1.6rem;
+  --font-size-default: 1.8rem;
+  --font-size-sm: 1.5rem;
   --font-weight-default: 400;
   --font-weight-semi-bold: 600;
   --font-weight-bold: 700;
