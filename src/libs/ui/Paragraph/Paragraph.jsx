@@ -16,13 +16,21 @@ const ParagraphWrapper = styled.p(({ center, singleSpaced }) => `
 `);
 
 const Paragraph = (props) => {
+  if (props.isHTML) return (
+    <ParagraphWrapper {...props} dangerouslySetInnerHTML={{ __html: props.content }}></ParagraphWrapper>
+  );
   return (
-    <ParagraphWrapper {...props}>{props.children}</ParagraphWrapper>
+    <ParagraphWrapper {...props}>{props.content}</ParagraphWrapper>
   );
 };
 
+Paragraph.defaultProps = {
+  isHTML: false,
+};
+
 Paragraph.propTypes = {
-  children: PropTypes.any.isRequired,
+  content: PropTypes.any.isRequired,
+  isHTML: PropTypes.bool.isRequired,
   // styles
   singleSpaced: PropTypes.bool,
   center: PropTypes.bool,
