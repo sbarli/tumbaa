@@ -42,7 +42,7 @@ export const isMailtoLink = to => to.slice(0, 6) === 'mailto';
 const Link = ({ children, linkTo }) => {
   const LinkItem = isExternalLink(linkTo)
     // if linkTo goes to external url, render as <a></a> tag
-    ? (<a href={linkTo} target="_blank">{children}</a>)
+    ? (<a href={linkTo} target="_blank" rel="noopener noreferrer">{children}</a>)
     // if linkTo goes to mailto url, render as <a></a> tag
     : isMailtoLink(linkTo)
       ? (<a href={linkTo} target="_top">{children}</a>)
