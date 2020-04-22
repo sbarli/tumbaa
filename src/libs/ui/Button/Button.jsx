@@ -4,6 +4,30 @@ import PropTypes from 'prop-types';
 // styled components
 import styled from 'styled-components/macro';
 
+const createFilledButton = (mainColor, hoverColor, fontColor, fontHover = null) => `
+  color: ${fontColor};
+  background-color: ${mainColor};
+  border: 4px solid ${mainColor};
+  border-radius: var(--radius-default);
+
+  &:hover {
+    color: ${fontHover ? fontHover : fontColor};
+    border-color: ${hoverColor};
+    background-color: ${hoverColor};
+  }
+`;
+
+const createOutlineButton = (mainColor, hoverColor, fontColor, fontHover = null) => `
+  color: ${fontColor};
+  border: 4px solid ${mainColor};
+  border-radius: var(--radius-default);
+
+  &:hover {
+    color: ${fontHover ? fontHover : fontColor};
+    border-color: ${hoverColor};
+  }
+`;
+
 const buttonSizes = {
   sm: `
     padding: 8px;
@@ -20,27 +44,10 @@ const buttonSizes = {
 };
 
 const themes = {
-  gold: `
-    color: var(--blurple-dark);
-    background-color: var(--gold-light);
-    border: 4px solid var(--gold-light);
-    border-radius: var(--radius-default);
-
-    &:hover {
-      background-color: var(--gold-primary);
-      border-color: var(--gold-primary);
-    }
-  `,
-  blurple: `
-    color: var(--blurple-light);
-    border: 4px solid var(--blurple-light);
-    border-radius: var(--radius-default);
-
-    &:hover {
-      color: var(--blurple-primary);
-      border-color: var(--blurple-primary);
-    }
-  `,
+  goldOutline: createOutlineButton('var(--gold-light)', 'var(--gold-primary)', 'var(--gold-primary)', 'var(--gold-primary)'),
+  goldFilled: createFilledButton('var(--gold-light)', 'var(--gold-primary)', 'var(--blurple-dark)'),
+  blurpleOutline: createOutlineButton('var(--blurple-light)', 'var(--blurple-primary)', 'var(--blurple-light)', 'var(--blurple-primary)'),
+  blurpleFilled: createFilledButton('var(--blurple-light)', 'var(--blurple-primary)', 'var(--gold-light)'),
   transparent: `
     background: transparent;
     border: none;
@@ -80,7 +87,7 @@ Button.propTypes = {
     'sm', 'md', 'lg',
   ]).isRequired,
   theme: PropTypes.oneOf([
-    'gold', 'transparent', 'blurple',
+    'transparent', 'blurpleOutline', 'goldOutline', 'blurpleFilled', 'goldFilled',
   ]).isRequired,
   type: PropTypes.oneOf([
     'button', 'submit'
