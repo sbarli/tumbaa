@@ -3,8 +3,6 @@ import React from 'react';
 import Link from '../libs/ui/Link/Link';
 import Button from '../libs/ui/Button/Button';
 import Header from '../libs/ui/Header/Header';
-import Section from '../libs/ui/Section/Section';
-import Paragraph from '../libs/ui/Paragraph/Paragraph';
 
 import styled from 'styled-components/macro';
 
@@ -38,7 +36,7 @@ const Content = styled.div(({ center }) => `
   }
 `);
 
-const Home = () => {
+const Teaching = () => {
   return (
     <TeachingWrapper>
       <Intro>
@@ -57,4 +55,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Teaching;
