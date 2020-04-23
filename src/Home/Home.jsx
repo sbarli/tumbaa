@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Teaching from '../Teaching/Teaching';
-
 import Link from '../libs/ui/Link/Link';
 import Button from '../libs/ui/Button/Button';
 import Figure from '../libs/ui/Figure/Figure';
@@ -81,7 +79,9 @@ const Home = () => {
       </Intro>
       <Content center>
         <Paragraph isHTML={true} content={BIO} />
-        <Teaching />
+        <Link linkTo="/teaching">
+          <Button theme="blurpleFilled" size="lg">Watch Me Teach!</Button>
+        </Link>
         <Link linkTo="/blog">
           <Button theme="blurpleFilled" size="lg">Things I've Done!</Button>
         </Link>

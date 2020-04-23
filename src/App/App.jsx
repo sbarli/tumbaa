@@ -1,6 +1,11 @@
 import React from 'react';
+import {
+  Switch,
+  Route,
+} from 'react-router-dom';
 
 import Home from '../Home/Home';
+import Teaching from '../Teaching/Teaching';
 
 import styled from 'styled-components/macro';
 
@@ -13,7 +18,10 @@ const Wrapper = styled.div`
 const App = () => {
   return (
     <Wrapper>
-      <Home />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/teaching" component={Teaching} />
+      </Switch>
     </Wrapper>
   );
 };
