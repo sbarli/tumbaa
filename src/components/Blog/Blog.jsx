@@ -3,8 +3,7 @@ import React from 'react';
 import blogs from '../../assets/blogs';
 import BlogPost from '../BlogPost/BlogPost';
 import Header from '../../libs/ui/Header/Header';
-
-import styled from 'styled-components/macro';
+import PageWrapper from '../../libs/ui/PageWrapper/PageWrapper';
 
 const Blog = () => {
   const BlogPosts = Object.values(blogs)
@@ -12,10 +11,10 @@ const Blog = () => {
       <BlogPost {...blog} />
     ));
   return (
-    <div>
+    <PageWrapper>
       <Header size="h1">Public Works</Header>
       {BlogPosts}
-    </div>
+    </PageWrapper>
   );
 };
 

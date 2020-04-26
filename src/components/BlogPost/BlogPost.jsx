@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Header from '../../libs/ui/Header/Header';
 import Link from '../../libs/ui/Link/Link';
-
-import styled from 'styled-components/macro';
+import Group from '../../libs/ui/Group/Group';
+import Header from '../../libs/ui/Header/Header';
+import Section from '../../libs/ui/Section/Section';
 
 const BlogPost = ({
   id,
@@ -12,11 +12,13 @@ const BlogPost = ({
   content,
   linkTo,
 }) => (
-    <div key={id}>
-      <Header size="h2">{title}</Header>
+  <Group>
+    <Section key={id}>
+      <Header size="h2" removeMarginTop>{title}</Header>
       <div dangerouslySetInnerHTML={{ __html: content }} />
       {linkTo && <Link linkTo={linkTo}>Read More</Link>}
-    </div>
+    </Section>
+  </Group>
   );
 
 BlogPost.propTypes = {

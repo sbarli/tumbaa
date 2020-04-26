@@ -4,13 +4,6 @@ import PropTypes from 'prop-types';
 import Link from '../Link/Link';
 
 /**
- * ===========================
- *     STYLED COMPONENTS
- * ===========================
- */
-import styled from 'styled-components/macro';
-
-/**
  * ==================
  *     COMPONENT
  * ==================
