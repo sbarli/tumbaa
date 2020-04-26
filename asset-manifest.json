@@ -5,18 +5,18 @@
     "main.js.map": "/tumbaa/static/js/main.32b717dd.chunk.js.map",
     "runtime-main.js": "/tumbaa/static/js/runtime-main.a6b85f1d.js",
     "runtime-main.js.map": "/tumbaa/static/js/runtime-main.a6b85f1d.js.map",
-    "static/js/2.bd8c7dd3.chunk.js": "/tumbaa/static/js/2.bd8c7dd3.chunk.js",
-    "static/js/2.bd8c7dd3.chunk.js.map": "/tumbaa/static/js/2.bd8c7dd3.chunk.js.map",
+    "static/js/2.207d2068.chunk.js": "/tumbaa/static/js/2.207d2068.chunk.js",
+    "static/js/2.207d2068.chunk.js.map": "/tumbaa/static/js/2.207d2068.chunk.js.map",
     "index.html": "/tumbaa/index.html",
-    "precache-manifest.304bb47b7fbc8a7c531c23627828f6f4.js": "/tumbaa/precache-manifest.304bb47b7fbc8a7c531c23627828f6f4.js",
+    "precache-manifest.9f1d4465d9627f90c2433d59662e972e.js": "/tumbaa/precache-manifest.9f1d4465d9627f90c2433d59662e972e.js",
     "service-worker.js": "/tumbaa/service-worker.js",
     "static/css/main.c1dd718c.chunk.css.map": "/tumbaa/static/css/main.c1dd718c.chunk.css.map",
-    "static/js/2.bd8c7dd3.chunk.js.LICENSE": "/tumbaa/static/js/2.bd8c7dd3.chunk.js.LICENSE",
+    "static/js/2.207d2068.chunk.js.LICENSE": "/tumbaa/static/js/2.207d2068.chunk.js.LICENSE",
     "static/media/headshot.jpg": "/tumbaa/static/media/headshot.5b761a00.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.a6b85f1d.js",
-    "static/js/2.bd8c7dd3.chunk.js",
+    "static/js/2.207d2068.chunk.js",
     "static/css/main.c1dd718c.chunk.css",
     "static/js/main.32b717dd.chunk.js"
   ]
