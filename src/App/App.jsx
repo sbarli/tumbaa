@@ -6,6 +6,7 @@ import {
 
 import Home from '../Home/Home';
 import Teaching from '../Teaching/Teaching';
+import Blog from '../Blog/Blog';
 
 import styled from 'styled-components/macro';
 
@@ -21,6 +22,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/teaching" component={Teaching} />
+        <Route exact path="/blog" component={Blog} />
       </Switch>
     </Wrapper>
   );
