@@ -1,8 +1,8 @@
 import React from 'react';
 
-import blogs from '../assets/blogs';
+import blogs from '../../assets/blogs';
 import BlogPost from '../BlogPost/BlogPost';
-import Header from '../libs/ui/Header/Header';
+import Header from '../../libs/ui/Header/Header';
 
 import styled from 'styled-components/macro';
 

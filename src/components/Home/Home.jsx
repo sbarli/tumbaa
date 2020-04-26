@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Link from '../libs/ui/Link/Link';
-import Button from '../libs/ui/Button/Button';
-import Figure from '../libs/ui/Figure/Figure';
-import Header from '../libs/ui/Header/Header';
-import Section from '../libs/ui/Section/Section';
-import Paragraph from '../libs/ui/Paragraph/Paragraph';
+import Link from '../../libs/ui/Link/Link';
+import Button from '../../libs/ui/Button/Button';
+import Figure from '../../libs/ui/Figure/Figure';
+import Header from '../../libs/ui/Header/Header';
+import Section from '../../libs/ui/Section/Section';
+import Paragraph from '../../libs/ui/Paragraph/Paragraph';
 
 import styled from 'styled-components/macro';
 

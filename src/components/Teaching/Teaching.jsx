@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Link from '../libs/ui/Link/Link';
-import Button from '../libs/ui/Button/Button';
-import Header from '../libs/ui/Header/Header';
+import Link from '../../libs/ui/Link/Link';
+import Button from '../../libs/ui/Button/Button';
+import Header from '../../libs/ui/Header/Header';
 
 import styled from 'styled-components/macro';
 
