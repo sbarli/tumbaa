@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Nav from '../Nav/Nav';
 import Link from '../../libs/ui/Link/Link';
 import Group from '../../libs/ui/Group/Group';
 import Button from '../../libs/ui/Button/Button';
@@ -27,6 +28,7 @@ const Teaching = () => {
           <Button theme="goldFilled" size="lg">Async, Event Loop, &amp; Promises - Part 2</Button>
         </Link>
       </Group>
+      <Nav />
     </PageWrapper>
   );
 };
