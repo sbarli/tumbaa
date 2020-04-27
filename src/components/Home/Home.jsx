@@ -10,10 +10,6 @@ import PageWrapper from '../../libs/ui/PageWrapper/PageWrapper';
 
 import styled from 'styled-components/macro';
 
-const Intro = styled.div`
-  align-self: center;
-`;
-
 const IntroGrid = styled.div`
   display: grid;
   grid-template-columns: 0.5fr 1fr;
@@ -29,37 +25,35 @@ Outside of coding, I very much enjoy snowboarding, traveling, and appealing to m
 const Home = () => {
   return (
     <PageWrapper>
-      <Intro>
-        <IntroGrid>
-          <Figure
-            imgSrc="headshot.jpg"
-            altText="Headshot"
-          />
-          <div>
-            <Header size="h1" includeWrapper>Hi, I'm Samantha.</Header>
-            <Header size="h2">I <span role="img" aria-label="heart">❤️</span> JavaScript.</Header>
-            <Header size="h3">... and teaching!</Header>
-          </div>
-        </IntroGrid>
-        <Group theme="horizontal">
-          <Link linkTo="https://github.com/samanthasalley">
-            <Button theme="blurpleOutline" size="sm">GitHub</Button>
-          </Link>
-          <Link linkTo="https://linkedin.com/in/samanthasalley">
-            <Button theme="blurpleOutline" size="sm">LinkedIn</Button>
-          </Link>
-          <Link linkTo="mailto:samanthasalley+website@gmail.com">
-            <Button theme="blurpleOutline" size="sm">Email</Button>
-          </Link>
-        </Group>
-      </Intro>
-      <Group theme="vertical" center>
-        <Paragraph isHTML={true} content={BIO} />
+      <IntroGrid>
+        <Figure
+          imgSrc="headshot.jpg"
+          altText="Headshot"
+        />
+        <div>
+          <Header size="h1" includeWrapper>Hi, I'm Samantha.</Header>
+          <Header size="h2">I <span role="img" aria-label="heart">❤️</span> JavaScript.</Header>
+          <Header size="h3">... and teaching!</Header>
+        </div>
+      </IntroGrid>
+      <Group theme="horizontal">
+        <Link linkTo="https://github.com/samanthasalley">
+          <Button theme="blurpleOutline" size="sm">GitHub</Button>
+        </Link>
+        <Link linkTo="https://linkedin.com/in/samanthasalley">
+          <Button theme="blurpleOutline" size="sm">LinkedIn</Button>
+        </Link>
+        <Link linkTo="mailto:samanthasalley+website@gmail.com">
+          <Button theme="blurpleOutline" size="sm">Email</Button>
+        </Link>
+      </Group>
+      <Paragraph isHTML={true} content={BIO} />
+      <Group theme="horizontal">
         <Link linkTo="/teaching">
-          <Button theme="blurpleFilled" size="lg">Watch Me Teach!</Button>
+          <Button theme="blurpleFilled" size="lg">Teaching</Button>
         </Link>
         <Link linkTo="/blog">
-          <Button theme="blurpleFilled" size="lg">Things I've Done!</Button>
+          <Button theme="blurpleFilled" size="lg">Public Work</Button>
         </Link>
       </Group>
     </PageWrapper>
