@@ -19,14 +19,18 @@ const HeaderWrapper = styled.header(({ center }) => `
 `);
 
 const sharedHeaderStyles = ({
-  removeMarginTop, addPaddingTop, theme,
+  removeMarginBottom,
+  removeMarginTop, 
+  addPaddingTop, 
   borderImage,
+  theme,
 }) => (`
   font-family: var(--font-stack-headers);
   font-weight: var(--font-weight-default);
   color: var(--teal-primary);
   width: fit-content;
   ${removeMarginTop ? 'margin-top: 0;' : ''}
+  ${removeMarginBottom ? 'margin-bottom: 0;' : ''}
   ${addPaddingTop ? 'padding-top: 5rem;' : ''}
   ${borderImage ? theme.borderImage(...borderImage) : ''}
 `);
