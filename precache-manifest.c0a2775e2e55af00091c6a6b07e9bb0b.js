@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f08722b87ab73604d6d731c25cb31bb7",
+    "revision": "fc0a9721825aeb6ebf14538312aeea70",
     "url": "/tumbaa/index.html"
   },
   {
-    "revision": "2480b4df3c6b0c4aa8e6",
+    "revision": "a55b680868d541ee61cc",
     "url": "/tumbaa/static/css/main.c1dd718c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tumbaa/static/js/2.207d2068.chunk.js.LICENSE"
   },
   {
-    "revision": "2480b4df3c6b0c4aa8e6",
-    "url": "/tumbaa/static/js/main.21988eeb.chunk.js"
+    "revision": "a55b680868d541ee61cc",
+    "url": "/tumbaa/static/js/main.1e4d5974.chunk.js"
   },
   {
     "revision": "3079f72b351583e2519a",
