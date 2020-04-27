@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 import blogs from '../../assets/blogs';
 import Nav from '../Nav/Nav';
@@ -8,8 +9,9 @@ import PageWrapper from '../../libs/ui/PageWrapper/PageWrapper';
 
 const Blog = () => {
   const BlogPosts = Object.values(blogs)
+    .sort((a, b) => moment(a.publishDate).isBefore(moment(b.publishDate)) ? 1 : -1)
     .map(blog => (
-      <BlogPost {...blog} />
+      <BlogPost key={blog.id} {...blog} />
     ));
   return (
     <PageWrapper>
