@@ -20,9 +20,9 @@ const App = () => {
   return (
     <Wrapper>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/teaching" component={Teaching} />
-        <Route exact path="/blog" component={Blog} />
+        <Route exact path={process.env.PUBLIC_URL + "/"} component={Home} />
+        <Route exact path={process.env.PUBLIC_URL + "/teaching"} component={Teaching} />
+        <Route exact path={process.env.PUBLIC_URL + "/blog"} component={Blog} />
       </Switch>
     </Wrapper>
   );

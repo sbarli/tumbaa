@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 /**
  * ===========================
@@ -39,17 +40,15 @@ export const isMailtoLink = to => to.slice(0, 6) === 'mailto';
  *     COMPONENT
  * ==================
  */
-const Link = ({ children, linkTo }) => {
+const RenderLink = ({ children, linkTo }) => {
   const LinkItem = isExternalLink(linkTo)
     // if linkTo goes to external url, render as <a></a> tag
     ? (<a href={linkTo} target="_blank" rel="noopener noreferrer">{children}</a>)
     // if linkTo goes to mailto url, render as <a></a> tag
     : isMailtoLink(linkTo)
       ? (<a href={linkTo} target="_top">{children}</a>)
-      // otherwise, render as standard a tag
-      : (<a href={linkTo}>{children}</a>);
-      // // otherwise, render as <Link></Link> tag
-      // : (<Link to={linkTo}>{children}</Link>);
+      // otherwise, render as a React-Router Link
+      : (<Link to={process.env.PUBLIC_URL ? process.env.PUBLIC_URL + linkTo : linkTo}>{children}</Link>);
   return (
     <LinkWrapper>{LinkItem}</LinkWrapper>
   );
@@ -60,9 +59,9 @@ const Link = ({ children, linkTo }) => {
  *     PROP-TYPES
  * ==================
  */
-Link.propTypes = {
+RenderLink.propTypes = {
   linkTo: PropTypes.string.isRequired,
   children: PropTypes.any.isRequired,
 };
 
-export default Link;
+export default RenderLink;
