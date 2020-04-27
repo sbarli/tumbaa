@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/tumbaa/static/css/main.c1dd718c.chunk.css",
-    "main.js": "/tumbaa/static/js/main.5ad3ccd5.chunk.js",
-    "main.js.map": "/tumbaa/static/js/main.5ad3ccd5.chunk.js.map",
+    "main.js": "/tumbaa/static/js/main.890fa39e.chunk.js",
+    "main.js.map": "/tumbaa/static/js/main.890fa39e.chunk.js.map",
     "runtime-main.js": "/tumbaa/static/js/runtime-main.a6b85f1d.js",
     "runtime-main.js.map": "/tumbaa/static/js/runtime-main.a6b85f1d.js.map",
-    "static/js/2.207d2068.chunk.js": "/tumbaa/static/js/2.207d2068.chunk.js",
-    "static/js/2.207d2068.chunk.js.map": "/tumbaa/static/js/2.207d2068.chunk.js.map",
+    "static/js/2.cb7dfccf.chunk.js": "/tumbaa/static/js/2.cb7dfccf.chunk.js",
+    "static/js/2.cb7dfccf.chunk.js.map": "/tumbaa/static/js/2.cb7dfccf.chunk.js.map",
     "index.html": "/tumbaa/index.html",
-    "precache-manifest.c0555fd7fa6ccaa959f75902a71fd728.js": "/tumbaa/precache-manifest.c0555fd7fa6ccaa959f75902a71fd728.js",
+    "precache-manifest.b44ae86dcecb1bd8fe57c474fff04b10.js": "/tumbaa/precache-manifest.b44ae86dcecb1bd8fe57c474fff04b10.js",
     "service-worker.js": "/tumbaa/service-worker.js",
     "static/css/main.c1dd718c.chunk.css.map": "/tumbaa/static/css/main.c1dd718c.chunk.css.map",
-    "static/js/2.207d2068.chunk.js.LICENSE": "/tumbaa/static/js/2.207d2068.chunk.js.LICENSE",
+    "static/js/2.cb7dfccf.chunk.js.LICENSE": "/tumbaa/static/js/2.cb7dfccf.chunk.js.LICENSE",
     "static/media/headshot.jpg": "/tumbaa/static/media/headshot.5b761a00.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.a6b85f1d.js",
-    "static/js/2.207d2068.chunk.js",
+    "static/js/2.cb7dfccf.chunk.js",
     "static/css/main.c1dd718c.chunk.css",
-    "static/js/main.5ad3ccd5.chunk.js"
+    "static/js/main.890fa39e.chunk.js"
   ]
 }
