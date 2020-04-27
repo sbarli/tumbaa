@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/tumbaa/precache-manifest.caf08d210c694c134a78cb3fd1d5c18d.js"
+  "/tumbaa/precache-manifest.e3b5fa218bc4802af5b0238da7038c82.js"
 );
 
 self.addEventListener('message', (event) => {
