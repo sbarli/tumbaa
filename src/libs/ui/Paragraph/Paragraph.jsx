@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 // styled components
 import styled from 'styled-components/macro';
+import mixins from '../styles/mixins';
 
 const singleSpacedStyles = `
   margin-top: 0;
@@ -11,6 +12,12 @@ const singleSpacedStyles = `
 
 const ParagraphWrapper = styled.p(({ center, singleSpaced }) => `
   color: var(--charcoal-primary);
+  text-align: center;
+  
+  ${mixins.respond.md`
+    text-align: unset;
+  `}
+
   ${singleSpaced ? singleSpacedStyles : ''}
   ${center ? 'text-align: center;' : ''}
 `);

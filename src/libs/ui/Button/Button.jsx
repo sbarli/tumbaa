@@ -59,6 +59,7 @@ const ButtonWrapper = styled.button(({ theme, size }) => `
   font-weight: var(--font-weight-bold);
   color: var(--charcoal-primary);
   cursor: pointer;
+  background-color: transparent;
 
   ${buttonSizes[size]}
   ${themes[theme]}

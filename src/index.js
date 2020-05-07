@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from "react-router-dom";
 import './libs/ui/styles/reset.css';
-import './libs/ui/styles/variables.css';
+import './libs/ui/styles/variables/variables.css';
 import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
 

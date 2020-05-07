@@ -3,18 +3,29 @@ import PropTypes from 'prop-types';
 
 import Link from '../Link/Link';
 
+// styled components
+import styled from 'styled-components/macro';
+
+const Figure = styled.figure(() => `
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`);
+
 /**
  * ==================
  *     COMPONENT
  * ==================
  */
-const Figure = ({ imgSrc, altText, caption, linkTo }) => {
+const StyledFigure = ({ imgSrc, altText, caption, linkTo }) => {
   const ImageAsset = require('../../../assets/images/' + imgSrc);
   const ImageComponent = (
-    <figure>
-      <img src={ImageAsset} alt={altText}></img>
+    <Figure>
+      <img src={ImageAsset} alt={altText} />
       {caption ? <caption>{caption}</caption> : null}
-    </figure>
+    </Figure>
   );
   return linkTo
     ? (
@@ -31,15 +42,15 @@ const Figure = ({ imgSrc, altText, caption, linkTo }) => {
  * ==================
  */
 
-Figure.defaultProps = {
+StyledFigure.defaultProps = {
   altText: '',
 };
 
-Figure.propTypes = {
+StyledFigure.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   altText: PropTypes.string,
   caption: PropTypes.string,
   linkTo: PropTypes.string,
 };
 
-export default Figure;
+export default StyledFigure;
