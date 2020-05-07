@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components/macro';
 
 const SectionWrapper = styled.section(() => `
+  width: 100%;
   padding: 1rem 2rem;
   background: white;
   border: var(--border-default);

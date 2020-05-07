@@ -3,13 +3,19 @@ import PropTypes from 'prop-types';
 
 // styled components
 import styled from 'styled-components/macro';
+import mixins from '../styles/mixins';
 
 const PageWrapper = styled.section(() => `
   display: flex;
   flex-direction: column;
-  padding-top: 5rem;
+  padding: 2rem;
   max-width: 720px;
   margin: auto;
+  width: 100%;
+
+  ${mixins.respond.md`
+    padding-top: 5rem;
+  `}
 `);
 
 const Page = (props) => {

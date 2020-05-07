@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
  */
 import styled from 'styled-components/macro';
 import mixins from '../styles/mixins';
+import { MARGIN_AND_PADDING_OPTIONS } from '../styles/variables/variables';
 
 const centeredHeader = `
   display: flex;
@@ -19,44 +20,37 @@ const HeaderWrapper = styled.header(({ center }) => `
 `);
 
 const sharedHeaderStyles = ({
-  removeMarginBottom,
-  removeMarginTop, 
-  addPaddingTop, 
+  includeWrapper,
+  removeMargins,
+  removePadding,
+  addPaddingTop,
   borderImage,
+  center,
   theme,
 }) => (`
   font-family: var(--font-stack-headers);
   font-weight: var(--font-weight-default);
   color: var(--teal-primary);
   width: fit-content;
-  ${removeMarginTop ? 'margin-top: 0;' : ''}
-  ${removeMarginBottom ? 'margin-bottom: 0;' : ''}
+  ${removeMargins ? mixins.removeMargin(removeMargins) : ''}
+  ${removePadding ? mixins.removePadding(removePadding) : ''}
   ${addPaddingTop ? 'padding-top: 5rem;' : ''}
+  ${!includeWrapper && center ? 'text-align: center;' : ''}
+  ${!includeWrapper ? 'width: 100%;' : ''}
   ${borderImage ? theme.borderImage(...borderImage) : ''}
 `);
 
 const headerStyles = {
   h1: styled.h1((props) => {
-    // borderImage: ['var(--teal-dark)', 'var(--teal-light)', '6px']
     const sharedProps = { ...props };
     return (`
       ${sharedHeaderStyles(sharedProps)}
       font-weight: var(--font-weight-bold);
-      font-size: 4.8rem;
       color: var(--teal-dark);
   `)
   }),
-  h2: styled.h2((props) => {
-    const sharedProps = { ...props };
-    return (`
-      ${sharedHeaderStyles(sharedProps)}
-      font-size: 3.6rem;
-  `)
-  }),
-  h3: styled.h3((props) => `
-    ${sharedHeaderStyles(props)}
-    font-size: 2.8rem;
-  `),
+  h2: styled.h2((props) => sharedHeaderStyles(props)),
+  h3: styled.h3((props) => sharedHeaderStyles(props)),
 };
 
 /**
@@ -94,7 +88,16 @@ Header.propTypes = {
   // styles
   center: PropTypes.bool,
   addPaddingTop: PropTypes.bool,
-  removeMarginTop: PropTypes.bool,
+  removeMargins: PropTypes.arrayOf(
+    PropTypes.oneOf([
+      ...MARGIN_AND_PADDING_OPTIONS
+    ])
+  ),
+  removePadding: PropTypes.arrayOf(
+    PropTypes.oneOf([
+      ...MARGIN_AND_PADDING_OPTIONS
+    ])
+  ),
 };
 
 export default Header;

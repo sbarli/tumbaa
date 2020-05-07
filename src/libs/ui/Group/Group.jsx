@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 // styled components
 import styled from 'styled-components/macro';
+import mixins from '../styles/mixins';
+import { MARGIN_AND_PADDING_OPTIONS } from '../styles/variables/variables';
 
 const themes = {
   vertical: `
@@ -24,10 +26,11 @@ const themes = {
   `,
 };
 
-const GroupWrapper = styled.div(({ theme, center }) => `
-${themes[theme]}
+const GroupWrapper = styled.div(({ theme, center, removeMargins }) => `
+  ${themes[theme]}
 
-${center ? 'align-items: center;' : ''}
+  ${center ? 'align-items: center;' : ''}
+  ${removeMargins ? mixins.removeMargin(removeMargins) : ''}
 `);
 
 const Group = (props) => {
@@ -47,6 +50,11 @@ Group.propTypes = {
     'vertical', 'horizontal',
   ]).isRequired,
   center: PropTypes.bool,
+  removeMargins: PropTypes.arrayOf(
+    PropTypes.oneOf([
+      ...MARGIN_AND_PADDING_OPTIONS
+    ])
+  ),
 };
 
 export default Group;
